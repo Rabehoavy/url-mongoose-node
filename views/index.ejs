@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+<div class="container-fluid bg-3 text-center">    
+  <div class="row">
+    <div class="col-sm-2">
+      
+      
+    </div>
+    <div class="col-sm-8"> 
+      <table class="table table-bordered table-hover table-striped table-vcenter">
+        <tbody>
+      <% if (page) { %>
+              <tr>
+                <td>Nom</td>
+                <td>Id</td>
+              </tr>
+            <% for(var i = 0; i < page.length; i++) { %>
+              <tr>
+                <td><%= page[i].name %>
+                <td>item-<a href="site/<%= page[i]._id %>"><%= page[i]._id %></td></a>
+              </tr>
+            <% } %>
+          <% } %>
+		  </tbody>
+      </table>
+    </div>
+    <div class="col-sm-2"> 
+      
+    </div>
+  </div>
+</div>
+</body>
+<% include partials/script %>
+</html>

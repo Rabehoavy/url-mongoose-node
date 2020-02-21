@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <% include partials/head %> 
+</head>
+<body>
+<% include partials/menu %>
+<div class="container-fluid bg-3 text-center">    
+  <h3><%= page %></h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      
+      
+    </div>
+    <div class="col-sm-4"> 
+      <form action="site/add" method="POST" enctype="multipart/form-data">
+        <label for="name">Entrer un https:// URL:</label>
+        <div class="form-group">
+          <input type="url" name="name" placeholder="votre url : https://example.com" pattern="https://.*" class="form-control" autofocus required>
+        </div>
+          <button type="submit" class="btn btn-primary btn-rounded">
+            Envoyer
+          </button>
+        </form>
+    </div>
+    <div class="col-sm-4"> 
+      
+    </div>
+  </div>
+</div>
+</body>
+<% include partials/script %>
+</html>
