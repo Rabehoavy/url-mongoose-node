@@ -13,7 +13,7 @@ let siteSchema = new Schema({
 let Operation = mongoose.model("domaines", siteSchema);
 
 // L'adresse de mon serveur
-let dbUrl = "mongodb://localhost:27017/site";
+let dbUrl = "mongodb+srv://rabehoavy:dWr0UqVsRvQe2J72@cluster0-5g4lb.mongodb.net/site?retryWrites=true&w=majority";
 const db = mongoose.connection;
 
 const controller = {};
