@@ -111,7 +111,7 @@ controller.pagination = (req, res) => {
                 if (err) return next(err)
                 //var qcode = result.name;
                 console.log("qcode: "+count);
-                QRCode.toDataURL(result[0].name, {type:'image/jpeg'}, function (err, url) {
+                QRCode.toDataURL(result[0].id, {type:'image/jpeg'}, function (err, url) {
                 if (err) throw err
                   res.render("url", {
                       url: result,

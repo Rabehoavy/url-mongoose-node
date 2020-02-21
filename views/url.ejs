@@ -12,19 +12,20 @@
         <div class="col-md-4">
             <div class="thumbnail">
                 <div class="caption">
-                    <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal"><%= url[i].name %></a>
-                    <p>item-<%= url[i]._id %></p>                
+                    <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal-<%= i %>"><%= url[i].name %></a>
+                    <p>item-<a href="../site/<%= url[i]._id %>"><%= url[i]._id %></a></p>                
                 </div>
 
-                  <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                  <div class="modal fade" id="basicModal-<%= i %>" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                          <h4 class="modal-title" id="myModalLabel"><%= url[i].name %></h4>
+                          <h4 class="modal-title" id="myModalLabel">Scanner</h4>
                         </div>
                         <div class="modal-body">
                           <img src="<%= qrcode %>">
+                          <h4>item-<a href="../site/<%= url[i]._id %>"><%= url[i]._id %></a></h4>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
